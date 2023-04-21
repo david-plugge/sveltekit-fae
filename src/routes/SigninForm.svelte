@@ -4,19 +4,13 @@
 	const form = fae.auth.signin.createForm();
 </script>
 
-<form
-	use:form.enhance
-	action={form.action}
-	method="post"
-	class="mx-auto max-w-md bg-neutral-800 rounded-lg p-4 flex flex-col gap-4 mt-32"
->
+<form use:form.enhance action={form.action} method="post" class="p-4 flex gap-4">
 	<div class="flex flex-col gap-2">
-		<label for="username">Username</label>
 		<input
 			class="bg-neutral-900 text-white border-none"
-			id="username"
 			name="username"
 			type="text"
+			placeholder="Username"
 			value={$form.data?.values?.username ?? ''}
 		/>
 		{#if $form.data?.errors?.username}
@@ -24,12 +18,11 @@
 		{/if}
 	</div>
 	<div class="flex flex-col gap-2">
-		<label for="password">Password</label>
 		<input
 			class="bg-neutral-900 text-white border-none"
-			id="password"
 			name="password"
 			type="password"
+			placeholder="Password"
 		/>
 		{#if $form.data?.errors?.password}
 			<p class="error">{$form.data.errors.password}</p>

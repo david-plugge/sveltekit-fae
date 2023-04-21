@@ -1,5 +1,7 @@
 import * as auth from './auth';
+import * as newsletter from './newsletter';
 
 export const faeActions = {
-	auth
+	auth,
+	newsletter
 };
