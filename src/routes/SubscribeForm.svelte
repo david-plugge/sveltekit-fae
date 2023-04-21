@@ -8,12 +8,12 @@
 	id="subscribe-to-newsletter"
 	action="?{form.queryParam}#subscribe-to-newsletter"
 	method="post"
-	class="bg-neutral-800 rounded-lg p-4 flex flex-col gap-4 mx-auto max-w-lg"
+	class="bg-neutral-800 rounded-lg p-4 flex flex-col gap-4 mx-auto"
 >
-	<div class="text-xl">Subscribe to newsletter</div>
+	<div class="text-xl font-medium">Subscribe to newsletter</div>
 
 	<div class="flex flex-col gap-2">
-		<label for="email">Email</label>
+		<label for="email" class="text-neutral-300 font-medium">Email</label>
 		<input class="bg-neutral-900 text-white border-none" id="email" name="email" type="text" />
 		{#if $form.data?.errors?.email}
 			<p class="error">{$form.data.errors.email}</p>
